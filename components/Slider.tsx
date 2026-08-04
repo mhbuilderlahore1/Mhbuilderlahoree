@@ -1,11 +1,9 @@
 export default function Slider() {
   return (
-    <section className="slider">
-
-      <div className="slide">
-        Slider Images will come from Admin Panel.
-      </div>
-
+    <section>
+      <p>
+        Home Slider (Dynamic from Admin Panel)
+      </p>
     </section>
   );
 }
