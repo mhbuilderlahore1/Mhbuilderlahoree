@@ -1,6 +1,6 @@
-export default function AdminPage() {
 import AdminHeader from "@/components/admin/Header";
 import Sidebar from "@/components/admin/Sidebar";
+import Card from "@/components/admin/dashboard/Card";
 
 export default function AdminPage() {
   return (
@@ -11,14 +11,16 @@ export default function AdminPage() {
 
       <main>
 
-        <h2>Dashboard</h2>
+        <h1>Dashboard</h1>
 
-        <p>
-          Welcome to MHBuilder CMS
-        </p>
+        <Card title="Pages" total={0} />
+        <Card title="Posts" total={0} />
+        <Card title="Projects" total={0} />
+        <Card title="Products" total={0} />
+        <Card title="Gallery" total={0} />
+        <Card title="Messages" total={0} />
 
       </main>
-
     </>
   );
 }
