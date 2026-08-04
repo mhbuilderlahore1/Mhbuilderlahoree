@@ -3,26 +3,22 @@ import ScrollButton from "./ScrollButton";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section>
 
-      <h1>
-        MHBuilder Lahore Building Contractor
-      </h1>
+      <h1>MHBuilder Lahore Building Contractor</h1>
 
       <p>
         Professional Construction Company in Lahore
       </p>
 
-      <div className="buttons">
-        <ContactButton
-          title="Contact Us"
-          link="/contact"
-        />
+      <ContactButton
+        title="Contact Us"
+        link="/contact"
+      />
 
-        <ScrollButton
-          target="#about"
-        />
-      </div>
+      <ScrollButton
+        target="#about"
+      />
 
     </section>
   );
