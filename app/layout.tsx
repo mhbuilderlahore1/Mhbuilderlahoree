@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MHBuilder Lahore Building Contractor",
-  description: "Construction Company in Lahore",
+  title: "MHBuilder Lahore",
+  description: "Building Contractor CMS",
 };
 
 export default function RootLayout({
