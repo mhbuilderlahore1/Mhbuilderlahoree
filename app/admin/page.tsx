@@ -1,29 +1,24 @@
 export default function AdminPage() {
+import AdminHeader from "@/components/admin/Header";
+import Sidebar from "@/components/admin/Sidebar";
+
+export default function AdminPage() {
   return (
-    <main>
-      <h1>MHBuilder CMS Admin Panel</h1>
+    <>
+      <AdminHeader />
 
-      <p>
-        Welcome Admin
-      </p>
+      <Sidebar />
 
-      <ul>
-        <li>Dashboard</li>
-        <li>Homepage</li>
-        <li>Pages</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Projects</li>
-        <li>Products</li>
-        <li>Gallery</li>
-        <li>Blog</li>
-        <li>Categories</li>
-        <li>Videos</li>
-        <li>Menus</li>
-        <li>Footer</li>
-        <li>SEO</li>
-        <li>Settings</li>
-      </ul>
-    </main>
+      <main>
+
+        <h2>Dashboard</h2>
+
+        <p>
+          Welcome to MHBuilder CMS
+        </p>
+
+      </main>
+
+    </>
   );
 }
