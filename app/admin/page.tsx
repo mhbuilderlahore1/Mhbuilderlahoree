@@ -1,26 +1,37 @@
 import AdminHeader from "@/components/admin/Header";
 import Sidebar from "@/components/admin/Sidebar";
-import Card from "@/components/admin/dashboard/Card";
+import StatsCard from "@/components/admin/dashboard/StatsCard";
+import QuickMenu from "@/components/admin/dashboard/QuickMenu";
 
 export default function AdminPage() {
   return (
     <>
       <AdminHeader />
-
       <Sidebar />
 
       <main>
 
-        <h1>Dashboard</h1>
+        <h1>MHBuilder CMS Dashboard</h1>
 
-        <Card title="Pages" total={0} />
-        <Card title="Posts" total={0} />
-        <Card title="Projects" total={0} />
-        <Card title="Products" total={0} />
-        <Card title="Gallery" total={0} />
-        <Card title="Messages" total={0} />
+        <StatsCard
+          title="Pages"
+          value={0}
+        />
+
+        <StatsCard
+          title="Posts"
+          value={0}
+        />
+
+        <StatsCard
+          title="Projects"
+          value={0}
+        />
+
+        <QuickMenu />
 
       </main>
+
     </>
   );
 }
