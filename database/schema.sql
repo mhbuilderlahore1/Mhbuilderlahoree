@@ -133,3 +133,108 @@ updated_at TEXT,
 FOREIGN KEY(category_id) REFERENCES categories(id)
 
 );
+CREATE TABLE services (
+
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+title TEXT NOT NULL,
+
+slug TEXT UNIQUE,
+
+content TEXT,
+
+image TEXT,
+
+button_title TEXT,
+
+button_link TEXT,
+
+seo_title TEXT,
+
+meta_description TEXT,
+
+status INTEGER DEFAULT 1,
+
+created_at TEXT,
+
+updated_at TEXT
+
+);
+
+CREATE TABLE projects (
+
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+title TEXT NOT NULL,
+
+slug TEXT UNIQUE,
+
+content TEXT,
+
+image TEXT,
+
+gallery TEXT,
+
+button_title TEXT,
+
+button_link TEXT,
+
+seo_title TEXT,
+
+meta_description TEXT,
+
+status INTEGER DEFAULT 1,
+
+created_at TEXT,
+
+updated_at TEXT
+
+);
+
+CREATE TABLE products (
+
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+title TEXT NOT NULL,
+
+slug TEXT UNIQUE,
+
+content TEXT,
+
+image TEXT,
+
+gallery TEXT,
+
+price TEXT,
+
+button_title TEXT,
+
+button_link TEXT,
+
+seo_title TEXT,
+
+meta_description TEXT,
+
+status INTEGER DEFAULT 1,
+
+created_at TEXT,
+
+updated_at TEXT
+
+);
+
+CREATE TABLE gallery (
+
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+title TEXT,
+
+image TEXT,
+
+alt_text TEXT,
+
+sort_order INTEGER DEFAULT 0,
+
+created_at TEXT
+
+);
