@@ -56,3 +56,80 @@ whatsapp TEXT,
 google_map TEXT
 
 );
+CREATE TABLE pages (
+
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+title TEXT NOT NULL,
+
+slug TEXT UNIQUE,
+
+content TEXT,
+
+featured_image TEXT,
+
+seo_title TEXT,
+
+meta_description TEXT,
+
+meta_keywords TEXT,
+
+status INTEGER DEFAULT 1,
+
+created_at TEXT,
+
+updated_at TEXT
+
+);
+
+CREATE TABLE categories (
+
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+name TEXT NOT NULL,
+
+slug TEXT UNIQUE,
+
+image TEXT,
+
+description TEXT,
+
+seo_title TEXT,
+
+meta_description TEXT,
+
+status INTEGER DEFAULT 1,
+
+created_at TEXT,
+
+updated_at TEXT
+
+);
+
+CREATE TABLE posts (
+
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+category_id INTEGER,
+
+title TEXT NOT NULL,
+
+slug TEXT UNIQUE,
+
+content TEXT,
+
+featured_image TEXT,
+
+seo_title TEXT,
+
+meta_description TEXT,
+
+status INTEGER DEFAULT 1,
+
+created_at TEXT,
+
+updated_at TEXT,
+
+FOREIGN KEY(category_id) REFERENCES categories(id)
+
+);
